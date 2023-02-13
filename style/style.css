@@ -100,7 +100,7 @@ main {
   height: 0.9rem;
 }
 
-.price span {
+.price div:nth-child(2) {
   display: flex;
   color: var(--Soft-blue);
   align-items: center;
