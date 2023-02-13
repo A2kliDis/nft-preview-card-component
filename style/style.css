@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+:host,
+:root {
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+  --font-Outfit: "Outfit", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--Very-dark-blue-main-BG);
+  font-family: var(--font-Outfit);
+}
+
+main {
+  width: 16.5rem;
+  padding: 1rem;
+  background-color: var(--Very-dark-blue-card-BG);
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 1rem;
+}
+.imgNFT {
+  position: relative;
+  width: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.imgNFT div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  background-position: center;
+  background-image: url(../images/icon-view.svg);
+  background-repeat: no-repeat;
+}
+
+.imgNFT div:hover {
+  background-color: hsl(178 100% 50% / 0.5);
+  background-image: url(../images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 100;
+}
+
+.imgNFT > a > img {
+  width: 100%;
+  height: 100%;
+}
+
+.title a {
+  color: var(--White);
+  text-decoration: none;
+  transition: color 0.5s ease-in-out;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.title a:hover {
+  color: var(--Cyan);
+}
+
+.description {
+  color: var(--Soft-blue);
+  font-weight: 300;
+  font-size: 0.85rem;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.price div {
+  display: flex;
+  color: var(--Cyan);
+  gap: 0.5rem;
+  align-items: center;
+  font-weight: 400;
+}
+.price img {
+  height: 0.9rem;
+}
+
+.price span {
+  display: flex;
+  color: var(--Soft-blue);
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 300;
+}
+
+hr {
+  color: var(--Very-dark-blue-line);
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.avatar img {
+  width: 1.7rem;
+  border: 0.1rem solid var(--White);
+  border-radius: 50%;
+}
+
+.avatar span {
+  color: var(--Soft-blue);
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.avatar a {
+  color: var(--White);
+  text-decoration: none;
+  transition: color 0.5s ease-in-out;
+}
+
+.avatar a:hover {
+  color: var(--Cyan);
+}
